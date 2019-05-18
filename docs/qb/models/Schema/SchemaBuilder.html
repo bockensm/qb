@@ -489,7 +489,7 @@ Class
 			<code>any</code>
 		</td>
 		<td>
-			<strong><a href="SchemaBuilder.html#dropAllObjects()">dropAllObjects</A></strong>([any options='[runtime expression]'], [any execute='true'])
+			<strong><a href="SchemaBuilder.html#dropAllObjects()">dropAllObjects</A></strong>([any options='[runtime expression]'], [any execute='true'], [any schema=''])
 			<br>
 			
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drops all objects in a database.
@@ -1011,7 +1011,7 @@ instance of `Blueprint` as the only argument.</p>
 		
 	</h3>
 
-	<kbd>public any <strong>dropAllObjects</strong>([any options='[runtime expression]'], [any execute='true'])</kbd>
+	<kbd>public any <strong>dropAllObjects</strong>([any options='[runtime expression]'], [any execute='true'], [any schema=''])</kbd>
 
 	<br><br>
 
@@ -1036,6 +1036,8 @@ instance of `Blueprint` as the only argument.</p>
 		<dd><code>options</code> - A struct of options to forward to the `queryExecute` call. Default: `{}`.</dd>
 		
 		<dd><code>execute</code> - Flag to immediately execute the statement.  Default: `true`.</dd>
+		
+		<dd><code>schema</code></dd>
 		
 		</dl>
 	

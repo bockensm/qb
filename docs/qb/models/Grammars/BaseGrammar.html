@@ -350,6 +350,64 @@ the generated sql for their specific platforms.</p>
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#log()">log</A></strong>
+			<br>
+			
+			<!-- only grab the first sentence of the hint -->
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LogBox logger to log out SQL and bindings.
+			
+			<br><br>
+			<ul>
+			
+				
+			
+				
+				<li class="label label-default label-annotations">access = public</li>
+				
+			
+				
+			
+				
+			
+				
+				<li class="label label-default label-annotations">returntype = any</li>
+				
+			
+				
+				<li class="label label-default label-annotations">inject = logbox:logger:{this}</li>
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
 			<code>string</code>
 		</td>
 		<td>
@@ -609,6 +667,21 @@ the generated sql for their specific platforms.</p>
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;string</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#compileCommonTables()">compileCommonTables</A></strong>(qb.models.Grammars.querybuilder query, array commonTables)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compiles the Common Table Expressions (CTEs).
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
 			<code>any</code>
 		</td>
 		<td>
@@ -783,7 +856,7 @@ the generated sql for their specific platforms.</p>
 			<code>private&nbsp;string</code>
 		</td>
 		<td>
-			<strong><a href="BaseGrammar.html#compileFrom()">compileFrom</A></strong>(qb.models.Grammars.querybuilder query, string from)
+			<strong><a href="BaseGrammar.html#compileFrom()">compileFrom</A></strong>(qb.models.Grammars.querybuilder query, any from)
 			<br>
 			
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compiles the table portion of a sql statement.
@@ -1008,6 +1081,21 @@ the generated sql for their specific platforms.</p>
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;string</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#compileUnions()">compileUnions</A></strong>(qb.models.Grammars.querybuilder query, array unions)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compiles the UNION portion of a sql statement.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
 			<code>string</code>
 		</td>
 		<td>
@@ -1144,10 +1232,38 @@ the generated sql for their specific platforms.</p>
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;string</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#getCommonTableExpressionSQL()">getCommonTableExpressionSQL</A></strong>(any query, array commonTables, [boolean supportsRecursiveKeyword='true'])
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compiles the Common Table Expressions (CTEs).
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
 			<code>string</code>
 		</td>
 		<td>
 			<strong><a href="BaseGrammar.html#getInterceptorService()">getInterceptorService</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#getLog()">getLog</A></strong>()
 			<br>
 			
 		</td>
@@ -1295,6 +1411,19 @@ the generated sql for their specific platforms.</p>
 		</td>
 		<td>
 			<strong><a href="BaseGrammar.html#setInterceptorService()">setInterceptorService</A></strong>(any interceptorService)
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#setLog()">setLog</A></strong>(any log)
 			<br>
 			
 		</td>
@@ -1611,6 +1740,71 @@ the generated sql for their specific platforms.</p>
 		</td>
 		<td>
 			<strong><a href="BaseGrammar.html#typeTinyInteger()">typeTinyInteger</A></strong>([any column])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#typeUnicodeLongText()">typeUnicodeLongText</A></strong>([any column])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#typeUnicodeMediumText()">typeUnicodeMediumText</A></strong>([any column])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#typeUnicodeString()">typeUnicodeString</A></strong>([any column])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#typeUnicodeText()">typeUnicodeText</A></strong>([any column])
+			<br>
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="BaseGrammar.html#typeUUID()">typeUUID</A></strong>([any column])
 			<br>
 			
 		</td>
@@ -2014,6 +2208,57 @@ This is handled in the ModuleConfig file</p>
 		
 			
 			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+		
+			
+		
+			
+			<dd><code>serializable</code> - true</dd>
+			
+		
+		</dl>
+
+		<hr>
+	
+		
+		<a name="log()"><!-- --></a>
+		<h3>log</h3>
+
+		<kbd>
+			property any
+			<strong>log</strong>
+			
+		</kbd>
+
+		<br><br>
+		
+			<p>LogBox logger to log out SQL and bindings.
+If this is not a ColdBox application, a NullLogger will be created in the constructor.</p>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			
+		
+			
+			<dd><code>access</code> - public</dd>
+			
+		
+			
+			<dd><code>required</code> - false</dd>
+			
+		
+			
+		
+			
+			<dd><code>returntype</code> - any</dd>
+			
+		
+			
+			<dd><code>inject</code> - logbox:logger:{this}</dd>
 			
 		
 			
@@ -2460,6 +2705,54 @@ This is handled in the ModuleConfig file</p>
 		<dd><code>query</code> - The Builder instance.</dd>
 		
 		<dd><code>columns</code> - The selected columns.</dd>
+		
+		</dl>
+	
+
+	
+		<dl>
+			<dt><strong>Returns:</strong></dt>
+			<dd>string</dd>
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="compileCommonTables()"><!-- --></a>
+	<h3>
+		compileCommonTables
+		
+	</h3>
+
+	<kbd>private string <strong>compileCommonTables</strong>(qb.models.Grammars.querybuilder query, array commonTables)</kbd>
+
+	<br><br>
+
+	
+		<p>Compiles the Common Table Expressions (CTEs).</p>
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>query</code> - The Builder instance.</dd>
+		
+		<dd><code>commonTables</code></dd>
 		
 		</dl>
 	
@@ -2984,7 +3277,7 @@ This is handled in the ModuleConfig file</p>
 		
 	</h3>
 
-	<kbd>private string <strong>compileFrom</strong>(qb.models.Grammars.querybuilder query, string from)</kbd>
+	<kbd>private string <strong>compileFrom</strong>(qb.models.Grammars.querybuilder query, any from)</kbd>
 
 	<br><br>
 
@@ -3702,6 +3995,54 @@ This is handled in the ModuleConfig file</p>
 	<hr>
 
 	
+	<a name="compileUnions()"><!-- --></a>
+	<h3>
+		compileUnions
+		
+	</h3>
+
+	<kbd>private string <strong>compileUnions</strong>(qb.models.Grammars.querybuilder query, array unions)</kbd>
+
+	<br><br>
+
+	
+		<p>Compiles the UNION portion of a sql statement.</p>
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>query</code> - The Builder instance.</dd>
+		
+		<dd><code>unions</code></dd>
+		
+		</dl>
+	
+
+	
+		<dl>
+			<dt><strong>Returns:</strong></dt>
+			<dd>string</dd>
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
 	<a name="compileUpdate()"><!-- --></a>
 	<h3>
 		compileUpdate
@@ -4123,6 +4464,56 @@ This is handled in the ModuleConfig file</p>
 	<hr>
 
 	
+	<a name="getCommonTableExpressionSQL()"><!-- --></a>
+	<h3>
+		getCommonTableExpressionSQL
+		
+	</h3>
+
+	<kbd>private string <strong>getCommonTableExpressionSQL</strong>(any query, array commonTables, [boolean supportsRecursiveKeyword='true'])</kbd>
+
+	<br><br>
+
+	
+		<p>Compiles the Common Table Expressions (CTEs).</p>
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>query</code> - The Builder instance.</dd>
+		
+		<dd><code>commonTables</code></dd>
+		
+		<dd><code>supportsRecursiveKeyword</code> - Determines if the current grammar requires the RECURSIVE keyword if any CTEs are recursive.</dd>
+		
+		</dl>
+	
+
+	
+		<dl>
+			<dt><strong>Returns:</strong></dt>
+			<dd>string</dd>
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
 	<a name="getInterceptorService()"><!-- --></a>
 	<h3>
 		getInterceptorService
@@ -4130,6 +4521,38 @@ This is handled in the ModuleConfig file</p>
 	</h3>
 
 	<kbd>public string <strong>getInterceptorService</strong>()</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="getLog()"><!-- --></a>
+	<h3>
+		getLog
+		
+	</h3>
+
+	<kbd>public string <strong>getLog</strong>()</kbd>
 
 	<br><br>
 
@@ -4581,6 +5004,45 @@ This function exists so that platform-specific grammars can override it if neede
 		<dt><strong>Parameters:</strong></dt>
 		
 		<dd><code>interceptorService</code></dd>
+		
+		</dl>
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="setLog()"><!-- --></a>
+	<h3>
+		setLog
+		
+	</h3>
+
+	<kbd>public any <strong>setLog</strong>(any log)</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>log</code></dd>
 		
 		</dl>
 	
@@ -5501,6 +5963,201 @@ This function exists so that platform-specific grammars can override it if neede
 	</h3>
 
 	<kbd>public any <strong>typeTinyInteger</strong>([any column])</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>column</code></dd>
+		
+		</dl>
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="typeUnicodeLongText()"><!-- --></a>
+	<h3>
+		typeUnicodeLongText
+		
+	</h3>
+
+	<kbd>public any <strong>typeUnicodeLongText</strong>([any column])</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>column</code></dd>
+		
+		</dl>
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="typeUnicodeMediumText()"><!-- --></a>
+	<h3>
+		typeUnicodeMediumText
+		
+	</h3>
+
+	<kbd>public any <strong>typeUnicodeMediumText</strong>([any column])</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>column</code></dd>
+		
+		</dl>
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="typeUnicodeString()"><!-- --></a>
+	<h3>
+		typeUnicodeString
+		
+	</h3>
+
+	<kbd>public any <strong>typeUnicodeString</strong>([any column])</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>column</code></dd>
+		
+		</dl>
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="typeUnicodeText()"><!-- --></a>
+	<h3>
+		typeUnicodeText
+		
+	</h3>
+
+	<kbd>public any <strong>typeUnicodeText</strong>([any column])</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>column</code></dd>
+		
+		</dl>
+	
+
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="typeUUID()"><!-- --></a>
+	<h3>
+		typeUUID
+		
+	</h3>
+
+	<kbd>public any <strong>typeUUID</strong>([any column])</kbd>
 
 	<br><br>
 

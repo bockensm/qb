@@ -308,6 +308,21 @@ Class
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="MySQLGrammar.html#compileInsert()">compileInsert</A></strong>(qb.models.Grammars.querybuilder query, array columns, array values)
+			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compile a Builder's query into an insert string.
+			
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
 			<code>any</code>
 		</td>
 		<td>
@@ -360,11 +375,13 @@ Class
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
-			<code>any</code>
+			<code>string</code>
 		</td>
 		<td>
-			<strong><a href="MySQLGrammar.html#typeString()">typeString</A></strong>([any column])
+			<strong><a href="MySQLGrammar.html#wrapAlias()">wrapAlias</A></strong>(any value)
 			<br>
+			
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parses and wraps a value from the Builder for use in a sql statement.
 			
 		</td>
 	</tr>
@@ -373,13 +390,11 @@ Class
 	
 	<tr>
 		<td align="right" valign="top" width="1%">
-			<code>string</code>
+			<code>any</code>
 		</td>
 		<td>
-			<strong><a href="MySQLGrammar.html#wrapAlias()">wrapAlias</A></strong>(any value)
+			<strong><a href="MySQLGrammar.html#wrapDefaultType()">wrapDefaultType</A></strong>([any column])
 			<br>
-			
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parses and wraps a value from the Builder for use in a sql statement.
 			
 		</td>
 	</tr>
@@ -549,9 +564,6 @@ Class
 				
 					
 					
-				
-					
-					
 					
 						
 					
@@ -568,18 +580,6 @@ Class
 						
 					
 					
-					
-					
-				
-					
-					
-					
-						
-					
-					
-					
-					
-				
 					
 					
 				
@@ -606,64 +606,7 @@ Class
 				
 					
 					
-					
-						
-					
-					
-					
-					
 				
-					
-					
-					
-						
-					
-					
-					
-					
-				
-					
-					
-					
-						
-					
-					
-					
-					
-				
-					
-					
-					
-						
-					
-					
-					
-					
-				
-					
-					
-					
-						
-					
-					
-					
-					
-				
-					
-					
-					
-						
-					
-					
-					
-					
-				
-					
-					
-					
-						
-					
-					
 					
 					
 				
@@ -771,6 +714,15 @@ Class
 				
 					
 					
+					
+						
+					
+					
+					
+					
+				
+					
+					
 				
 					
 					
@@ -796,6 +748,54 @@ Class
 						
 					
 					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
 					
 					
 				
@@ -990,6 +990,60 @@ Class
 				
 					
 					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
 				
 					
 					
@@ -1090,6 +1144,57 @@ Class
 					
 					
 				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
+					
+					
+				
+					
+					
+					
+						
+					
+					
 					
 					
 				
@@ -1290,7 +1395,7 @@ Class
 				
 
 				
-					<a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddColumn()">compileAddColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddComment()">compileAddComment</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddConstraint()">compileAddConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddIndex()">compileAddIndex</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddType()">compileAddType</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAggregate()">compileAggregate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileColumnExists()">compileColumnExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileColumns()">compileColumns</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreate()">compileCreate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreateBody()">compileCreateBody</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreateColumn()">compileCreateColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreateColumns()">compileCreateColumns</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreateIndexes()">compileCreateIndexes</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileDelete()">compileDelete</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileDrop()">compileDrop</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileDropColumn()">compileDropColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileDropConstraint()">compileDropConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileFrom()">compileFrom</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileGroups()">compileGroups</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileHaving()">compileHaving</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileHavings()">compileHavings</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileInsert()">compileInsert</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileJoins()">compileJoins</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileLimitValue()">compileLimitValue</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileModifyColumn()">compileModifyColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileOffsetValue()">compileOffsetValue</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileOrders()">compileOrders</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileRaw()">compileRaw</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileRenameColumn()">compileRenameColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileRenameConstraint()">compileRenameConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileSelect()">compileSelect</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileTableExists()">compileTableExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileUpdate()">compileUpdate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileWheres()">compileWheres</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#concatenate()">concatenate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateAutoIncrement()">generateAutoIncrement</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateComment()">generateComment</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateIfExists()">generateIfExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateNullConstraint()">generateNullConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateType()">generateType</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateUniqueConstraint()">generateUniqueConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#getInterceptorService()">getInterceptorService</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#getTablePrefix()">getTablePrefix</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#getUtils()">getUtils</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexBasic()">indexBasic</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexCheck()">indexCheck</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexForeign()">indexForeign</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexPrimary()">indexPrimary</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexUnique()">indexUnique</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#init()">init</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#modifyUnsigned()">modifyUnsigned</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#removeLeadingCombinator()">removeLeadingCombinator</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#runQuery()">runQuery</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#setInterceptorService()">setInterceptorService</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#setTablePrefix()">setTablePrefix</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#setUtils()">setUtils</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#tryPostInterceptor()">tryPostInterceptor</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#tryPreInterceptor()">tryPreInterceptor</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeBigInteger()">typeBigInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeBit()">typeBit</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeBoolean()">typeBoolean</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeDate()">typeDate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeDatetime()">typeDatetime</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeDecimal()">typeDecimal</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeEnum()">typeEnum</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeFloat()">typeFloat</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeInteger()">typeInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeJson()">typeJson</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeLongText()">typeLongText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeMediumInteger()">typeMediumInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeMediumText()">typeMediumText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeSmallInteger()">typeSmallInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeText()">typeText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeTime()">typeTime</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeTimestamp()">typeTimestamp</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeTinyInteger()">typeTinyInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereBasic()">whereBasic</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereBetween()">whereBetween</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereColumn()">whereColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereExists()">whereExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereIn()">whereIn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereInSub()">whereInSub</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNested()">whereNested</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotBetween()">whereNotBetween</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotExists()">whereNotExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotIn()">whereNotIn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotInSub()">whereNotInSub</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotNull()">whereNotNull</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNull()">whereNull</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereRaw()">whereRaw</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereSub()">whereSub</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#wrapColumn()">wrapColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#wrapTable()">wrapTable</a>
+					<a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddColumn()">compileAddColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddComment()">compileAddComment</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddConstraint()">compileAddConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddIndex()">compileAddIndex</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAddType()">compileAddType</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileAggregate()">compileAggregate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileColumnExists()">compileColumnExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileColumns()">compileColumns</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCommonTables()">compileCommonTables</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreate()">compileCreate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreateBody()">compileCreateBody</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreateColumn()">compileCreateColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreateColumns()">compileCreateColumns</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileCreateIndexes()">compileCreateIndexes</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileDelete()">compileDelete</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileDrop()">compileDrop</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileDropColumn()">compileDropColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileDropConstraint()">compileDropConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileFrom()">compileFrom</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileGroups()">compileGroups</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileHaving()">compileHaving</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileHavings()">compileHavings</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileJoins()">compileJoins</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileLimitValue()">compileLimitValue</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileModifyColumn()">compileModifyColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileOffsetValue()">compileOffsetValue</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileOrders()">compileOrders</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileRaw()">compileRaw</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileRenameColumn()">compileRenameColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileRenameConstraint()">compileRenameConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileSelect()">compileSelect</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileTableExists()">compileTableExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileUnions()">compileUnions</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileUpdate()">compileUpdate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#compileWheres()">compileWheres</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#concatenate()">concatenate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateAutoIncrement()">generateAutoIncrement</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateComment()">generateComment</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateIfExists()">generateIfExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateNullConstraint()">generateNullConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateType()">generateType</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#generateUniqueConstraint()">generateUniqueConstraint</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#getCommonTableExpressionSQL()">getCommonTableExpressionSQL</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#getInterceptorService()">getInterceptorService</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#getLog()">getLog</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#getTablePrefix()">getTablePrefix</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#getUtils()">getUtils</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexBasic()">indexBasic</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexCheck()">indexCheck</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexForeign()">indexForeign</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexPrimary()">indexPrimary</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#indexUnique()">indexUnique</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#init()">init</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#modifyUnsigned()">modifyUnsigned</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#removeLeadingCombinator()">removeLeadingCombinator</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#runQuery()">runQuery</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#setInterceptorService()">setInterceptorService</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#setLog()">setLog</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#setTablePrefix()">setTablePrefix</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#setUtils()">setUtils</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#tryPostInterceptor()">tryPostInterceptor</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#tryPreInterceptor()">tryPreInterceptor</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeBigInteger()">typeBigInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeBit()">typeBit</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeBoolean()">typeBoolean</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeDate()">typeDate</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeDatetime()">typeDatetime</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeDecimal()">typeDecimal</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeEnum()">typeEnum</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeFloat()">typeFloat</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeInteger()">typeInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeJson()">typeJson</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeLongText()">typeLongText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeMediumInteger()">typeMediumInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeMediumText()">typeMediumText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeSmallInteger()">typeSmallInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeString()">typeString</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeText()">typeText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeTime()">typeTime</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeTimestamp()">typeTimestamp</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeTinyInteger()">typeTinyInteger</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeUnicodeLongText()">typeUnicodeLongText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeUnicodeMediumText()">typeUnicodeMediumText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeUnicodeString()">typeUnicodeString</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeUnicodeText()">typeUnicodeText</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#typeUUID()">typeUUID</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereBasic()">whereBasic</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereBetween()">whereBetween</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereColumn()">whereColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereExists()">whereExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereIn()">whereIn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereInSub()">whereInSub</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNested()">whereNested</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotBetween()">whereNotBetween</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotExists()">whereNotExists</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotIn()">whereNotIn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotInSub()">whereNotInSub</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNotNull()">whereNotNull</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereNull()">whereNull</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereRaw()">whereRaw</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#whereSub()">whereSub</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#wrapColumn()">wrapColumn</a>, <a href="../../../qb/models/Grammars/BaseGrammar.html#wrapTable()">wrapTable</a>
 				
 			</td>
 		</tr>
@@ -1542,6 +1647,68 @@ Class
 	<hr>
 
 	
+	<a name="compileInsert()"><!-- --></a>
+	<h3>
+		compileInsert
+		
+	</h3>
+
+	<kbd>public string <strong>compileInsert</strong>(qb.models.Grammars.querybuilder query, array columns, array values)</kbd>
+
+	<br><br>
+
+	
+		<p>Compile a Builder's query into an insert string.</p>
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../qb/models/Grammars/BaseGrammar.html#compileInsert()">compileInsert</a></code>
+			in class
+			<code>
+				<a href="../../../qb/models/Grammars/BaseGrammar.html" title="class in qb.models.Grammars">BaseGrammar</a>
+			</code>
+			</dd>
+		</dl>
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>query</code> - The Builder instance.</dd>
+		
+		<dd><code>columns</code> - The array of columns into which to insert.</dd>
+		
+		<dd><code>values</code> - The array of values to insert.</dd>
+		
+		</dl>
+	
+
+	
+		<dl>
+			<dt><strong>Returns:</strong></dt>
+			<dd>string</dd>
+		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
 	<a name="compileRenameTable()"><!-- --></a>
 	<h3>
 		compileRenameTable
@@ -1736,57 +1903,6 @@ Class
 	<hr>
 
 	
-	<a name="typeString()"><!-- --></a>
-	<h3>
-		typeString
-		
-	</h3>
-
-	<kbd>public any <strong>typeString</strong>([any column])</kbd>
-
-	<br><br>
-
-	
-
-	
-
-	
-		
-		
-	
-
-	
-	
-		<dl>
-			<dt><strong>Overrides:</strong></dt>
-			<dd>
-			<code>
-			<a href="../../../qb/models/Grammars/BaseGrammar.html#typeString()">typeString</a></code>
-			in class
-			<code>
-				<a href="../../../qb/models/Grammars/BaseGrammar.html" title="class in qb.models.Grammars">BaseGrammar</a>
-			</code>
-			</dd>
-		</dl>
-	
-
-	
-		<dl>
-		<dt><strong>Parameters:</strong></dt>
-		
-		<dd><code>column</code></dd>
-		
-		</dl>
-	
-
-	
-
-	
-
-	</dl>
-	<hr>
-
-	
 	<a name="wrapAlias()"><!-- --></a>
 	<h3>
 		wrapAlias
@@ -1837,6 +1953,45 @@ Class
 			<dt><strong>Returns:</strong></dt>
 			<dd>string</dd>
 		</dl>
+	
+
+	
+
+	</dl>
+	<hr>
+
+	
+	<a name="wrapDefaultType()"><!-- --></a>
+	<h3>
+		wrapDefaultType
+		
+	</h3>
+
+	<kbd>public any <strong>wrapDefaultType</strong>([any column])</kbd>
+
+	<br><br>
+
+	
+
+	
+
+	
+		
+		
+	
+
+	
+	
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>column</code></dd>
+		
+		</dl>
+	
+
 	
 
 	
