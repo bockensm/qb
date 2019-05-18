@@ -393,6 +393,64 @@ component extends="testbox.system.BaseSpec" {
                                     .orWhereNotNull( "id" );
                             }, orWhereNotNull() );
                         } );
+
+                        it( "can add where null with a callback", function() {
+                            testCase( function( builder ) {
+                                builder
+                                    .select( "*" )
+                                    .from( "users" )
+                                    .whereNull( function( q ) {
+                                        q.select( "timestamp" )
+                                            .from( "logins" )
+                                            .whereColumn( "logins.user_id", "users.id" )
+                                            .limit( 1 );
+                                    } );
+                            }, whereNullWithCallback() );
+                        } );
+
+                        it( "can add where null with a query", function() {
+                            testCase( function( builder ) {
+                                builder
+                                    .select( "*" )
+                                    .from( "users" )
+                                    .whereNull(
+                                        getBuilder()
+                                            .select( "timestamp" )
+                                            .from( "logins" )
+                                            .whereColumn( "logins.user_id", "users.id" )
+                                            .limit( 1 )
+                                    );
+                            }, whereNullWithQuery() );
+                        } );
+
+                        it( "can add where not null with a callback", function() {
+                            testCase( function( builder ) {
+                                builder
+                                    .select( "*" )
+                                    .from( "users" )
+                                    .whereNotNull( function( q ) {
+                                        q.select( "timestamp" )
+                                            .from( "logins" )
+                                            .whereColumn( "logins.user_id", "users.id" )
+                                            .limit( 1 );
+                                    } );
+                            }, whereNotNullWithCallback() );
+                        } );
+
+                        it( "can add where not null with a query", function() {
+                            testCase( function( builder ) {
+                                builder
+                                    .select( "*" )
+                                    .from( "users" )
+                                    .whereNotNull(
+                                        getBuilder()
+                                            .select( "timestamp" )
+                                            .from( "logins" )
+                                            .whereColumn( "logins.user_id", "users.id" )
+                                            .limit( 1 )
+                                    );
+                            }, whereNotNullWithQuery() );
+                        } );
                     } );
 
                     describe( "where between", function() {

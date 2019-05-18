@@ -126,4 +126,14 @@ component
         return true;
     }
 
+    /**
+     * Returns whether the object is a QueryBuilder.
+     * This exists because isInstanceOf is super slow!
+     *
+     * @returns boolean
+     */
+    public boolean function isQuery() {
+        return false;
+    }
+
 }

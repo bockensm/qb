@@ -435,6 +435,36 @@ component displayname="Grammar" accessors="true" {
     }
 
     /**
+    * Compiles a null where sub statement.
+    *
+    * @query The Builder instance.
+    * @where The where clause to compile.
+    *
+    * @return string
+    */
+    private string function whereSubNull(
+        required QueryBuilder query,
+        required struct where
+    ) {
+        return "(#compileSelect( where.query )#) IS NULL";
+    }
+
+    /**
+    * Compiles a not null where sub statement.
+    *
+    * @query The Builder instance.
+    * @where The where clause to compile.
+    *
+    * @return string
+    */
+    private string function whereSubNotNull(
+        required QueryBuilder query,
+        required struct where
+    ) {
+        return "(#compileSelect( where.query )#) IS NOT NULL";
+    }
+
+    /**
     * Compiles a between where statement.
     *
     * @query The Builder instance.

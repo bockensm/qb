@@ -203,6 +203,34 @@ component extends="tests.resources.AbstractQueryBuilderSpec" {
         };
     }
 
+    function whereNullWithCallback() {
+        return {
+            sql = "SELECT * FROM `users` WHERE (SELECT `timestamp` FROM `logins` WHERE `logins`.`user_id` = `users`.`id` LIMIT 1) IS NULL",
+            bindings = []
+        };
+    }
+
+    function whereNullWithQuery() {
+        return {
+            sql = "SELECT * FROM `users` WHERE (SELECT `timestamp` FROM `logins` WHERE `logins`.`user_id` = `users`.`id` LIMIT 1) IS NULL",
+            bindings = []
+        };
+    }
+
+    function whereNotNullWithCallback() {
+        return {
+            sql = "SELECT * FROM `users` WHERE (SELECT `timestamp` FROM `logins` WHERE `logins`.`user_id` = `users`.`id` LIMIT 1) IS NOT NULL",
+            bindings = []
+        };
+    }
+
+    function whereNotNullWithQuery() {
+        return {
+            sql = "SELECT * FROM `users` WHERE (SELECT `timestamp` FROM `logins` WHERE `logins`.`user_id` = `users`.`id` LIMIT 1) IS NOT NULL",
+            bindings = []
+        };
+    }
+
     function whereBetween() {
         return {
             sql = "SELECT * FROM `users` WHERE `id` BETWEEN ? AND ?",

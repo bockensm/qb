@@ -1370,6 +1370,14 @@ component displayname="QueryBuilder" accessors="true" {
     * @return qb.models.Query.QueryBuilder
     */
     public QueryBuilder function whereNull( column, combinator = "and", negate = false ) {
+        if ( ! isSimpleValue( column ) ) {
+            if ( isClosure( column ) || isCustomFunction( column ) ) {
+                var q = newQuery();
+                column( q );
+                return whereSubNull( q, arguments.combinator, arguments.negate );
+            }
+            return whereSubNull( arguments.column, arguments.combinator, arguments.negate );
+        }
         var type = negate ? "notNull" : "null";
         variables.wheres.append( {
             type = type,
@@ -1441,6 +1449,24 @@ component displayname="QueryBuilder" accessors="true" {
         arguments.combinator = "or";
         arguments.negate = true;
         return whereNull( argumentCollection = arguments );
+    }
+
+    /**
+    * Adds an NOT NULL subquery clause to the query.
+    *
+    * @query      The query instance to check if null.
+    * @combinator The boolean combinator for the clause (e.g. "and" or "or"). Default: "and"
+    * @negate     False for NULL, True for NOT NULL. Default: false.
+    *
+    * @return     qb.models.Query.QueryBuilder
+    */
+    private QueryBuilder function whereSubNull( query, combinator = "and", negate = false ) {
+        variables.wheres.append( {
+            type = negate ? "subNotNull" : "subNull",
+            query = arguments.query,
+            combinator = arguments.combinator
+        } );
+        return this;
     }
 
     /**
@@ -2466,6 +2492,16 @@ component displayname="QueryBuilder" accessors="true" {
      */
     public boolean function isJoin() {
         return false;
+    }
+
+    /**
+     * Returns whether the object is a QueryBuilder.
+     * This exists because isInstanceOf is super slow!
+     *
+     * @returns boolean
+     */
+    public boolean function isQuery() {
+        return true;
     }
 
     /**

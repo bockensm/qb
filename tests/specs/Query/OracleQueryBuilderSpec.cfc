@@ -203,6 +203,22 @@ component extends="tests.resources.AbstractQueryBuilderSpec" {
         };
     }
 
+    function whereNullWithCallback() {
+        return 'SELECT * FROM "USERS" WHERE (SELECT * FROM (SELECT results.*, ROWNUM AS "QB_RN" FROM (SELECT "TIMESTAMP" FROM "LOGINS" WHERE "LOGINS"."USER_ID" = "USERS"."ID") results ) WHERE "QB_RN" <= 1) IS NULL';
+    }
+
+    function whereNullWithQuery() {
+        return 'SELECT * FROM "USERS" WHERE (SELECT * FROM (SELECT results.*, ROWNUM AS "QB_RN" FROM (SELECT "TIMESTAMP" FROM "LOGINS" WHERE "LOGINS"."USER_ID" = "USERS"."ID") results ) WHERE "QB_RN" <= 1) IS NULL';
+    }
+
+    function whereNotNullWithCallback() {
+        return 'SELECT * FROM "USERS" WHERE (SELECT * FROM (SELECT results.*, ROWNUM AS "QB_RN" FROM (SELECT "TIMESTAMP" FROM "LOGINS" WHERE "LOGINS"."USER_ID" = "USERS"."ID") results ) WHERE "QB_RN" <= 1) IS NOT NULL';
+    }
+
+    function whereNotNullWithQuery() {
+        return 'SELECT * FROM "USERS" WHERE (SELECT * FROM (SELECT results.*, ROWNUM AS "QB_RN" FROM (SELECT "TIMESTAMP" FROM "LOGINS" WHERE "LOGINS"."USER_ID" = "USERS"."ID") results ) WHERE "QB_RN" <= 1) IS NOT NULL';
+    }
+
     function whereBetween() {
         return {
             sql = "SELECT * FROM ""USERS"" WHERE ""ID"" BETWEEN ? AND ?",

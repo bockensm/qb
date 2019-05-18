@@ -203,6 +203,22 @@ component extends="tests.resources.AbstractQueryBuilderSpec" {
         };
     }
 
+    function whereNullWithCallback() {
+        return "SELECT * FROM [users] WHERE (SELECT TOP (1) [timestamp] FROM [logins] WHERE [logins].[user_id] = [users].[id]) IS NULL";
+    }
+
+    function whereNullWithQuery() {
+        return "SELECT * FROM [users] WHERE (SELECT TOP (1) [timestamp] FROM [logins] WHERE [logins].[user_id] = [users].[id]) IS NULL";
+    }
+
+    function whereNotNullWithCallback() {
+        return "SELECT * FROM [users] WHERE (SELECT TOP (1) [timestamp] FROM [logins] WHERE [logins].[user_id] = [users].[id]) IS NOT NULL";
+    }
+
+    function whereNotNullWithQuery() {
+        return "SELECT * FROM [users] WHERE (SELECT TOP (1) [timestamp] FROM [logins] WHERE [logins].[user_id] = [users].[id]) IS NOT NULL";
+    }
+
     function whereBetween() {
         return {
             sql = "SELECT * FROM [users] WHERE [id] BETWEEN ? AND ?",
